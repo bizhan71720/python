@@ -1,0 +1,6 @@
+file = input("masir ra vared konid :")
+txt = open( file )
+first = txt.read()
+print(first)
+print("the end")
+input("press enter to exit") 
