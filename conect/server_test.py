@@ -12,7 +12,7 @@ c , addr = s.accept()
 print ("connect to "+str(addr)+'\n')
 
 while True :
-    cmd = str(input("shell=> "))
+    cmd = raw_input("shell=> ")
     c.sendall(cmd)
     cmd_output = c.recv(12345)
     print (cmd_output)
