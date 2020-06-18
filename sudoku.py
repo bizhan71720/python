@@ -38,10 +38,23 @@ def get_puzzle():
             r.insert(col,b)
 
 def draw():
-    for j in puzzle:
-        for i in j:
-            print(i, end=" ")
-        print("\n")
+    print("┌───────┬───────┬───────┐")
+    for i in range(9):
+        for j in range(9):
+            if j % 3 == 0:
+                print("│ ", end='')
+            # set output color to print guessed cells in different color
+            if guess[i][j]:
+                print("\033[32m", end='')
+            print(puzzle[i][j], ' ', sep='', end='')
+            # reset the output color
+            if guess[i][j]:
+                print("\033[0m", end='')
+        print("│")
+        if i == 8:
+            print("└───────┴───────┴───────┘")
+        elif i % 3 == 2:
+            print("├───────┼───────┼───────┤")
   
 
 def find_free():
