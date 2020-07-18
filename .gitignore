@@ -1,1 +1,6 @@
-.vscode/launch.json
+.vscode
+.idea
+.ipynb_checkpoints
+__pycache__
+*.ipynb
+*test*
